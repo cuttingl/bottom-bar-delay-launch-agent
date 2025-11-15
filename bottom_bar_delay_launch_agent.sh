@@ -9,8 +9,8 @@ LAUNCHAGENT_PLIST="$LAUNCHAGENT_DIR/com.user.reduce-dock-delay.plist"
 # Function to apply Dock settings and enable automatic startup
 apply_and_enable() {
     echo "Applying Dock settings..."
-    defaults write com.apple.dock autohide-delay -float 0
-    defaults write com.apple.dock autohide-time-modifier -float 0.2
+    defaults write com.apple.dock autohide-delay -float 0.15
+    defaults write com.apple.dock autohide-time-modifier -float 0.1
     killall Dock
     
     echo "Creating LaunchAgent for automatic startup..."
